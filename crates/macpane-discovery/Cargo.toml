@@ -1,0 +1,14 @@
+[package]
+name = "macpane-discovery"
+description = "Bonjour/mDNS discovery of Screen Sharing (_rfb._tcp) hosts on the local network"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+log.workspace = true
+thiserror.workspace = true
+mdns-sd = "0.13"
