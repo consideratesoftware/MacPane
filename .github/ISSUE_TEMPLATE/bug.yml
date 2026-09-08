@@ -1,0 +1,35 @@
+name: Bug
+description: Something does not work
+labels: [bug]
+body:
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version and Mac model
+      placeholder: Sequoia 15.6, MacBook Pro 14" M3
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      placeholder: Windows 11 24H2
+  - type: dropdown
+    id: auth
+    attributes:
+      label: Mac auth setting
+      options:
+        - Default (Mac username + password)
+        - "VNC viewers may control screen with password" enabled
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+    validations:
+      required: true
+  - type: textarea
+    id: probe
+    attributes:
+      label: Output of the probe example
+      render: text
+      description: "`cargo run -p macpane-rfb --example probe -- HOST --user U --pass P`"

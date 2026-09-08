@@ -1,0 +1,26 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/macpane-rfb",
+    "crates/macpane-discovery",
+    "crates/macpane",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+repository = "https://github.com/consideratesoftware/MacPane"
+authors = ["Considerate Software"]
+rust-version = "1.80"
+
+[workspace.dependencies]
+thiserror = "2"
+log = "0.4"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1
+strip = true
+panic = "abort"

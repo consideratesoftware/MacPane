@@ -1,0 +1,23 @@
+[package]
+name = "macpane-rfb"
+description = "Pure-Rust RFB (VNC) client protocol library with Apple Remote Desktop authentication"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+thiserror.workspace = true
+log.workspace = true
+des = "0.8"
+aes = "0.8"
+md-5 = "0.10"
+num-bigint = "0.4"
+num-traits = "0.2"
+rand = "0.8"
+flate2 = "1"
+
+[dev-dependencies]
+hex = "0.4"
